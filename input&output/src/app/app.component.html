@@ -1,0 +1,9 @@
+<h1>App Component - ParentComponent</h1>
+<input type="text" #usr> &nbsp;
+
+<button (click)="submitUserName(usr.value)">Submit</button>
+<h1>{{itemFromCHild}}</h1>
+
+
+<demo-comp [temp]="username" (ouputitem)="catchdata($event)" ></demo-comp>   
+
