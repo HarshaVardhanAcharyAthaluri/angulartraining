@@ -1,0 +1,29 @@
+<style>
+    table,tr,td,th{
+        border: solid 1px;
+        border-collapse: collapse;
+    }
+</style>
+<h1>App Component </h1>
+<button (click)="displayUsers()">Submit</button>
+<br/>
+<table *ngIf="users.length">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>COMPANY</th>
+    </tr>
+    <tr *ngFor="let usr of users">
+        <td>{{usr.id}}</td>
+        <td>{{usr.name | uppercase}}</td>
+        <td>{{usr.username}}</td>
+        <td>{{usr.email}}</td>
+        <td>{{usr.company.name}}</td>
+    </tr>
+
+</table>
+
+
+
