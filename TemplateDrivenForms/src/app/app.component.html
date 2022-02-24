@@ -1,0 +1,13 @@
+<h1>App Component</h1>
+
+<form #myform="ngForm" (submit)="submitdata(myform.value)">
+    Name <input type="text" name="usr" ngModel required>
+    Email <input type="text" name="email" ngModel>
+    password<input type="password" name="pwd" ngModel>
+    <button type="submit">Submit</button>
+</form>
+
+
+
+
+
