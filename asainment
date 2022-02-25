@@ -1,0 +1,70 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-inbox',
+  templateUrl: './inbox.component.html',
+  styleUrls: ['./inbox.component.css']
+})
+export class InboxComponent implements OnInit {
+
+  
+  constructor() { }
+
+  
+
+
+  private userDetails = [
+    { 
+     userId: "c9f8b42d-dcb9-4b71-ba4c-3bc8f842bd8a", firstName: "santhosh", 
+    secondName: "japa",
+    userProfileId: "12" 
+    },
+    {
+    userId: "d038dbfo-de91-4255-8aa6-d98a9155cdc6", firstName: "ganesh", 
+    secondName: "pilli", 
+     userProfileId: "12" 
+    }, 
+    {
+    userId: "e58b01fe-8f74-4f46-90c1-7a374995f4e9", firstName: "srujan", 
+    secondName: "akula",
+     userProfileId: "12" 
+    },
+    {
+     userId: "1e83ad2b-9328-4bb6-aa4f-66ea52df6978", firstName: "srinivasa",
+     secondName: "alla",
+    userProfileId: "12" 
+    }
+    ];
+
+    private userIds = [ 
+    
+    "c9f8b42d-dcb9-4b71-ba4c-3b08f842bd8a", 
+    
+    "d038dbfo-de91-4255-8aa6-d98a9155cdc6", 
+    
+    "1e83ad2b-9328-4bb6-aa4f-66ea52df6978" 
+    ];
+    
+    
+    ngOnInit() {
+    
+    this.filterById()
+    }
+
+     filtereddate = new Array();
+    filterById(){
+this.userDetails.filter(temp=> {
+  this.userIds.forEach(us=>{
+    if(us === temp.userId){
+    this.filtereddate.push({"id":us,"userProfileId":temp.userProfileId,"userName":temp.firstName});
+    }
+  });
+
+})
+console.log(this.filtereddate);
+    }
+    
+
+
+
+}
