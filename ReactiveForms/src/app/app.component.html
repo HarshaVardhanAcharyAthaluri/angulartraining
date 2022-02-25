@@ -1,0 +1,12 @@
+<h1>App Component</h1>
+
+<form [formGroup] = "signupform" (submit)="submitdata()">
+    Name <input type="text" name="usr" formControlName="usr">
+    Email <input type="text" name="email" formControlName="email">
+    password<input type="password" name="pwd" formControlName="pwd">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
